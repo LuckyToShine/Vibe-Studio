@@ -1,128 +1,277 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		    <meta charset="UTF-8">
-		        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-			    <title>IA y Multimedia | Análisis del Impacto</title>
-			        <style>
-        /* Estilos generales */
-        body { 
-		            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-			                line-height: 1.6; 
-					            margin: 0; 
-						                padding: 0; 
-								            color: #333; 
-									                background-color: #f9f9f9;
-											        }
-	        .container { 
-			            width: 85%; 
-				                max-width: 1000px;
-						            margin: auto; 
-							                overflow: hidden; 
-									            padding: 2rem 0; 
-										            }
-		        h1, h2, h3 { color: #2c3e50; }
-			        
-			        /* Cabecera (Hero Section) */
-			        header { 
-					            background: linear-gradient(135deg, #2c3e50, #3498db); 
-						                color: #fff; 
-								            padding: 4rem 0; 
-									                text-align: center; 
-											        }
-				        header h1 { color: #fff; margin-bottom: 0.5rem; font-size: 2.5rem; }
-					        header p { font-size: 1.2rem; opacity: 0.9; }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GenAI Studios · IA Generativa</title>
+  <!-- Meta description (incluye el tema) -->
+  <meta name="description" content="Sitio web sobre IA Generativa: exploramos el futuro de la multimedia generada por inteligencia artificial. Prototipo estático con HTML y CSS.">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GenAI Studios · IA Generativa">
+  <meta property="og:description" content="Sitio web sobre IA Generativa: multimedia generada por inteligencia artificial. Prototipo interactivo solo con CSS.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630/2A3B4C/FFFFFF?text=IA+Generativa"> <!-- URL externa opcional -->
+  <meta property="og:url" content="https://ejemplo.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Fuentes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Tema del sitio (comentario obligatorio) -->
+  <!-- Tema del sitio: IA Generativa -->
+</head>
+<body data-topic="IA Generativa">
+  <!-- 
+    =============================================
+    INTERACCIONES IMPLEMENTADAS (SIN JAVASCRIPT)
+    =============================================
+    1. Menú responsive: checkbox-hack (input + label).
+    2. Modal con :target (CTA del hero).
+    3. Tarjetas de servicios con details/summary (más info).
+    4. Carrusel de testimonios con radio buttons + labels.
+    5. Formulario con validación HTML5 y mensaje de éxito mediante ancla (#contacto-gracias).
+    6. Navegación suave con scroll-behavior: smooth.
+    7. Página activa: aria-current="page" en el enlace "Inicio".
+    8. Efectos hover/focus con transiciones y sombras.
+    9. Animaciones al cargar (simulan scroll reveal) con respeto a prefers-reduced-motion.
+    10. Microinteracciones en iconos sociales con @keyframes.
 
-						        /* Tarjetas de cuadrícula */
-						        .grid { 
-								            display: grid; 
-									                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-											            gap: 2rem; 
-												                margin-top: 1.5rem;
-														        }
-							        .card { 
-									            background: #fff; 
-										                padding: 2rem; 
-												            border-radius: 10px; 
-													                box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
-															            border-top: 4px solid #3498db;
-																            }
-								        
-								        /* Sección del Proyecto / Equipo */
-								        .equipo {
-										            background: #fff;
-											                padding: 2rem;
-													            border-radius: 10px;
-														                margin-top: 3rem;
-																            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-																	            }
+    LIMITACIONES (COMPORTAMIENTOS QUE REQUERIRÍAN JS O BACKEND)
+    - Envío real del formulario: necesitaría backend o fetch. Aquí se simula con ancla.
+    - Validación en tiempo real con mensajes dinámicos: se usaría JS para mostrar errores.
+    - Scroll reveal real (Intersection Observer): se simula con animación al cargar.
+    - Estados de carga (loading/spinner): se muestra un ejemplo estático comentado en servicios.
+    - Persistencia del carrusel sin recarga: los radios funcionan, pero no hay auto-play.
+    =============================================
+  -->
 
-									        /* Pie de página */
-									        footer { 
-											            background: #2c3e50; 
-												                color: #fff; 
-														            text-align: center; 
-															                padding: 1.5rem 0; 
-																	            margin-top: 3rem; 
-																		            }
+  <!-- HEADER con menú responsive (checkbox hack) -->
+  <header class="header">
+    <div class="header__container">
+      <!-- Logo SVG inline -->
+      <a href="#" class="logo" aria-label="GenAI Studios">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="40" height="40" rx="8" fill="var(--color-primary)" />
+          <text x="8" y="28" font-family="Poppins, sans-serif" font-size="20" font-weight="600" fill="white">AI</text>
+        </svg>
+        <span class="logo__text">GenAI</span>
+      </a>
 
-										        /* Responsividad para móviles */
-										        @media(max-width: 768px) { 
-												            header { padding: 2rem 0; }
-													                .container { width: 95%; }
-															        }
-											    </style>
-	</head>
-	<body>
+      <!-- Checkbox oculto para menú hamburguesa -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
+      <label for="menu-toggle" class="menu-icon" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </label>
 
-		    <header>
-			            <div class="container">
-					                <h1>El Impacto de la IA en la Creación Multimedia</h1>
-							            <p>Analizando los retos éticos, creativos y económicos en la era digital</p>
-								            </div>
-									        </header>
+      <!-- Menú de navegación -->
+      <nav class="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link" aria-current="page">Inicio</a></li>
+          <li class="nav__item"><a href="#sobre" class="nav__link">Sobre</a></li>
+          <li class="nav__item"><a href="#servicios" class="nav__link">Servicios</a></li>
+          <li class="nav__item"><a href="#testimonios" class="nav__link">Testimonios</a></li>
+          <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-										    <div class="container">
-											            <section id="problematica">
-													                <h2>1. La Problemática Central</h2>
-															            <p>La inteligencia artificial generativa ha democratizado la creación de imágenes, videos y audio, reduciendo drásticamente los tiempos de producción. Sin embargo, esta revolución tecnológica ha introducido desafíos críticos que deben abordarse. El principal problema radica en la velocidad a la que avanza la tecnología frente a la falta de un marco ético y regulatorio sólido.</p>
-																            </section>
+  <main>
+    <!-- HERO con CTA que abre modal :target -->
+    <section class="hero" id="inicio">
+      <div class="hero__content">
+        <h1 class="hero__title">GenAI Studios</h1>
+        <p class="hero__subtitle">Sitio web sobre IA Generativa</p>
+        <a href="#modal-cta" class="btn btn--primary">Descubre el futuro</a>
+      </div>
+      <!-- Fondo SVG inline (ondas) -->
+      <svg class="hero__wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+        <path fill="var(--color-secondary)" fill-opacity="0.2" d="M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,202.7C672,224,768,256,864,245.3C960,235,1056,181,1152,154.7C1248,128,1344,128,1392,128L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+      </svg>
+    </section>
 
-																	            <section id="impacto" style="margin-top: 3rem;">
-																			                <h2>2. Dimensiones del Impacto</h2>
-																					            <div class="grid">
-																							                    <div class="card">
-																										                        <h3>Propiedad Intelectual</h3>
-																													                    <p>Los modelos de IA se entrenan con millones de obras preexistentes. Esto genera un debate urgente sobre los derechos de autor y cómo asegurar una compensación justa o el reconocimiento a los artistas originales.</p>
-																															                    </div>
-																																	                    <div class="card">
-																																				                        <h3>Desinformación y Confianza</h3>
-																																							                    <p>La facilidad para crear "deepfakes" y contenido hiperrealista dificulta la distinción entre lo real y lo fabricado. Esto representa un riesgo para la veracidad de la información en medios de comunicación.</p>
-																																									                    </div>
-																																											                    <div class="card">
-																																														                        <h3>Desarrollo Profesional</h3>
-																																																	                    <p>La automatización de tareas creativas plantea incertidumbre laboral para ilustradores, actores de doblaje y diseñadores. Se requiere una adaptación del mercado hacia el uso de la IA como herramienta, no como reemplazo.</p>
-																																																			                    </div>
-																																																					                </div>
-																																																							        </section>
+    <!-- MODAL CSS-only (activado por :target) -->
+    <div class="modal" id="modal-cta">
+      <div class="modal__content">
+        <h2>Bienvenido al futuro generativo</h2>
+        <p>Este modal se abre con <code>:target</code> sin JavaScript. Explora las posibilidades de la IA generativa en multimedia.</p>
+        <a href="#" class="btn btn--secondary">Cerrar</a>
+      </div>
+    </div>
 
-																																																								        <section class="equipo" id="proyecto">
-																																																										            <h2>3. Nuestra Visión y Desarrollo</h2>
-																																																											                <p>Frente a este panorama, nuestro enfoque busca identificar oportunidades para un uso ético de la inteligencia artificial en la creación multimedia. Promovemos la idea de que la tecnología debe complementar el talento humano, integrando prácticas como el uso de marcas de agua para contenido generado y la transparencia en las fuentes de datos.</p>
-																																																													            
-																																																													            <h3 style="margin-top: 1.5rem; color: #3498db;">Integrantes y Roles del Equipo:</h3>
-																																																														                <ul>
-																																																																	                <li><strong>Investigación y Análisis:</strong> [Nombre del integrante] - Encargado de recopilar datos sobre el impacto en derechos de autor.</li>
-																																																																			                <li><strong>Propuesta de Valor:</strong> [Nombre del integrante] - Diseño de estrategias éticas para creadores.</li>
-																																																																					                <li><strong>Desarrollo Técnico:</strong> [Tu Nombre] - Estructuración y presentación del proyecto.</li>
-																																																																							            </ul>
-																																																																								            </section>
-																																																																									        </div>
+    <!-- SECCIÓN SOBRE NOSOTROS -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <h2 class="section__title">Sobre nosotros</h2>
+        <div class="sobre-grid">
+          <div class="sobre-text">
+            <!-- Primera línea con el tema y objetivo (obligatorio) -->
+            <p class="sobre-intro"><strong>IA Generativa</strong> es el núcleo de nuestra misión: democratizar la creación multimedia mediante inteligencia artificial.</p>
+            <p>Combinamos investigación de vanguardia con diseño accesible para ofrecer herramientas que generan imágenes, música y texto de forma ética y creativa.</p>
+          </div>
+          <div class="sobre-image">
+            <!-- SVG inline ilustrativo -->
+            <svg width="100%" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="100" cy="100" r="40" fill="var(--color-accent)" opacity="0.8" />
+              <circle cx="200" cy="80" r="30" fill="var(--color-secondary)" opacity="0.6" />
+              <circle cx="150" cy="150" r="50" fill="var(--color-primary)" opacity="0.5" />
+              <text x="120" y="180" font-family="Inter" fill="white" font-size="12">IA Generativa</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
 
-																																																																										    <footer>
-																																																																											            <p>Proyecto de Desarrollo Emprendedor | 2026</p>
-																																																																												        </footer>
+    <!-- SECCIÓN SERVICIOS con tarjetas y details/summary -->
+    <section class="section section--alt" id="servicios">
+      <div class="container">
+        <h2 class="section__title">Servicios</h2>
+        <div class="cards-grid">
+          <!-- Tarjeta 1 -->
+          <article class="card">
+            <svg class="card__icon" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 16l4-4 4 4 4-4 4 4" stroke="var(--color-primary)"/><rect x="2" y="4" width="20" height="16" rx="2" stroke="var(--color-primary)"/></svg>
+            <h3 class="card__title">Generación de imágenes</h3>
+            <p class="card__desc">Crea visuales únicos con modelos de última generación.</p>
+            <details class="card__details">
+              <summary class="card__summary">Más información</summary>
+              <p class="card__extra">Desde bocetos a fotorrealismo, entrenamos modelos personalizados para tu marca.</p>
+            </details>
+          </article>
+          <!-- Tarjeta 2 con simulación de "loading" (estático) -->
+          <article class="card">
+            <svg class="card__icon" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 18V5l12-2v13" stroke="var(--color-secondary)"/><circle cx="6" cy="18" r="3" stroke="var(--color-secondary)"/><circle cx="18" cy="16" r="3" stroke="var(--color-secondary)"/></svg>
+            <h3 class="card__title">Música generativa</h3>
+            <p class="card__desc">Composiciones infinitas adaptadas a tu proyecto.</p>
+            <details class="card__details">
+              <summary class="card__summary">Más información</summary>
+              <p class="card__extra">Usamos redes neuronales para generar bandas sonoras únicas en tiempo real.</p>
+            </details>
+            <!-- Ejemplo de botón con spinner CSS (simula loading, solo visual) -->
+            <button class="btn btn--loading-sim" disabled aria-label="Simulación de carga">Cargando...</button>
+            <!-- Comentario: en un caso real, JS cambiaría el estado. Aquí es estático. -->
+          </article>
+          <!-- Tarjeta 3 -->
+          <article class="card">
+            <svg class="card__icon" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 6v12M6 12h12" stroke="var(--color-accent)"/><circle cx="12" cy="12" r="9" stroke="var(--color-accent)"/></svg>
+            <h3 class="card__title">Texto creativo</h3>
+            <p class="card__desc">Redacción automática, guiones y storytelling.</p>
+            <details class="card__details">
+              <summary class="card__summary">Más información</summary>
+              <p class="card__extra">Modelos de lenguaje ajustados a tu tono y necesidades.</p>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
 
-	</body>
+    <!-- SECCIÓN TESTIMONIOS con carrusel de radio buttons -->
+    <section class="section" id="testimonios">
+      <div class="container">
+        <h2 class="section__title">Testimonios</h2>
+        <div class="carousel-container">
+          <!-- Radios ocultos -->
+          <input type="radio" name="testimonial" id="test-1" class="carousel-radio" checked>
+          <input type="radio" name="testimonial" id="test-2" class="carousel-radio">
+          <input type="radio" name="testimonial" id="test-3" class="carousel-radio">
+
+          <!-- Slides -->
+          <div class="carousel-slides">
+            <div class="slide" id="slide1">
+              <blockquote>
+                <p>"La IA generativa ha transformado nuestro flujo de trabajo. Las imágenes creadas son asombrosas."</p>
+                <cite>— Ana López, Directora de Arte</cite>
+              </blockquote>
+            </div>
+            <div class="slide" id="slide2">
+              <blockquote>
+                <p>"La música generada encaja perfectamente con nuestros vídeos. Ahorramos horas de edición."</p>
+                <cite>— Carlos Ruiz, Productor Audiovisual</cite>
+              </blockquote>
+            </div>
+            <div class="slide" id="slide3">
+              <blockquote>
+                <p>"El texto generado es coherente y creativo. Ideal para campañas de marketing."</p>
+                <cite>— Marta Gómez, Content Manager</cite>
+              </blockquote>
+            </div>
+          </div>
+
+          <!-- Controles (labels) -->
+          <div class="carousel-controls">
+            <label for="test-1" class="carousel-label" aria-label="Testimonio 1">1</label>
+            <label for="test-2" class="carousel-label" aria-label="Testimonio 2">2</label>
+            <label for="test-3" class="carousel-label" aria-label="Testimonio 3">3</label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO con formulario y éxito por ancla -->
+    <section class="section section--alt" id="contacto">
+      <div class="container">
+        <h2 class="section__title">Contacto</h2>
+        <!-- Formulario con validación HTML5; action apunta a #contacto-gracias -->
+        <form action="#contacto-gracias" method="get" class="form">
+          <div class="form__group">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" required aria-required="true" aria-describedby="nombre-error">
+            <!-- Mensaje de error estático (solo visible con :invalid? No sin JS. Se comenta su propósito) -->
+            <span id="nombre-error" class="form__error">El nombre es obligatorio (simulado, JS mostraría esto)</span>
+          </div>
+          <div class="form__group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-error">
+            <span id="email-error" class="form__error">Introduce un email válido</span>
+          </div>
+          <div class="form__group">
+            <label for="mensaje">Mensaje *</label>
+            <textarea id="mensaje" name="mensaje" required aria-required="true" aria-describedby="mensaje-error"></textarea>
+            <span id="mensaje-error" class="form__error">El mensaje no puede estar vacío</span>
+          </div>
+          <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+        </form>
+
+        <!-- Mensaje de éxito oculto que se muestra al llegar al ancla #contacto-gracias -->
+        <div id="contacto-gracias" class="success-message">
+          <p>¡Gracias por contactarnos! Te responderemos a la mayor brevedad. (Simulación: el envío real requiere backend).</p>
+          <a href="#contacto" class="btn btn--secondary">Volver al formulario</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <p>&copy; 2026 GenAI Studios</p>
+        <p>Aviso de privacidad · Términos</p>
+      </div>
+      <div class="footer__col">
+        <p>Dirección ficticia: Av. Innovación 123, Madrid</p>
+      </div>
+      <div class="footer__col footer__social">
+        <!-- Iconos sociales con microinteracción (hover animado) -->
+        <a href="#" aria-label="Twitter">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+    <!-- Enlaces secundarios -->
+    <div class="container footer__links">
+      <a href="#">Inicio</a> · <a href="#sobre">Sobre</a> · <a href="#servicios">Servicios</a> · <a href="#testimonios">Testimonios</a> · <a href="#contacto">Contacto</a>
+    </div>
+  </footer>
+
+  <!-- Nota sobre sitemap y robots (recomendados pero no incluidos por restricción) -->
+  <!-- 
+    En un sitio real se incluirían robots.txt y sitemap.xml para SEO.
+    Por restricción del entregable (solo HTML/CSS) no se añaden.
+  -->
+</body>
 </html>
-
